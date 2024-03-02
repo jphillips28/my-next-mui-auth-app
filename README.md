@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Next.js 14, Material UI 5, NextAuth 4 Web Application
+<!-- TODO -->
+TBD
 
-## Getting Started
+## Prerequisites
+- Node Version Manager v0.39.7 (_optional, but highly recommended_)
+- Node.js 20.11.1 LTS
+- NPM v10.2.4
+- Visual Studio Code v1.87.0 (_optional, but highly recommended_)
+  - Quick `RUN AND DEGUG` Startups
+  - ![README_image_01.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_01.png?raw=true)
+  - Click on the "Run and Debug" icon within the Visual Studio Code side-bar
+  - Select the "Server & Chrome Incognito" launch configuration from the `RUN AND DEBUG` select list
+  - Click on the play button next to the `RUN AND DEBUG` select list
+    - This will launch two debugging "Call Stacks", one for the Node.js server and one for the Chrome client
+    - This will allow for the strategic placement of breakpoints on both _client-side_ code AND _server-side_ code (_eliminating the need for `console.log()` debugging_)
+  - If you accidentially close the Chrome client during debugging, you can reattach it by:
+    - Selecting the "Chrome" or the "Chrome: Incognito" launch configuration from the `RUN AND DEBUG` select list
+    - Clicking on the play button next to the `RUN AND DEBUG` select list
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Getting started
+- Open a CLI supporting the above prerequisites
+- Clone this repository's default branch to a local directory
+- Navigate to the newly cloned local repository
+  - I recommend using Visual Studio Code (_it's free!_)
+<!-- - Copy and rename the `.env.local.sample` file to `.env.local` -->
+- Run `npm install`
+  - I recommend running `npm ci` if you've already _initialized_ project dependencies (_i.e. a `package-lock.json` exists_)
+- The supported local `npm run <script>` commands are:
+  - `npm run dev` for local development (_refer to prerequisites for `.vscode` debug configurations_)
+    - On [http://localhost:3000](http://localhost:3000)
+  - `npm run build` for a local production build
+  - `npm run start` for a local production app
+    - On [http://localhost:3000](http://localhost:3000)
+  - `npm run lint` (_TODO: Needs more `.eslint` configuration_)

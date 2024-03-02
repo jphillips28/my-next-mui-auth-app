@@ -1,0 +1,47 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Chrome",
+			"request": "launch",
+			"type": "chrome",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}",
+		},
+		{
+			"name": "Chrome: Incognito",
+			"request": "launch",
+			"type": "chrome",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}",
+			"runtimeArgs": [
+				"--incognito",
+			],
+		},
+		{
+			"name": "NPM: Server",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev",
+		}
+	],
+	"compounds": [
+		{
+			"name": "Server & Chrome",
+			"configurations": [
+				"NPM: Server",
+				"Chrome",
+			],
+		},
+		{
+			"name": "Server & Chrome Incognito",
+			"configurations": [
+				"NPM: Server",
+				"Chrome: Incognito",
+			],
+		}
+	]
+}

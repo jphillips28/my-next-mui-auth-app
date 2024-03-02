@@ -4,7 +4,10 @@ export default function Home() {
   return (
     <main>
       <Container>
-        <Typography variant="h1">
+        <Typography
+          variant="h1"
+          textAlign="center"
+        >
           Hello You!!!
         </Typography>
       </Container>

@@ -33,3 +33,8 @@ TBD
   - `npm run start` for a local production app
     - On [http://localhost:3000](http://localhost:3000)
   - `npm run lint` (_TODO: Needs more `.eslint` configuration_)
+
+## Supporting Library Documentation
+- [Node.js 20](https://nodejs.org/dist/latest-v20.x/docs/api/)
+- [Next.js 14 App Router](https://nextjs.org/docs)
+- [Material UI 5](https://mui.com/material-ui/getting-started/)

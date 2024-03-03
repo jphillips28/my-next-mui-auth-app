@@ -7,16 +7,19 @@ TBD
 - Node.js 20.11.1 LTS
 - NPM v10.2.4
 - Visual Studio Code v1.87.0 (_optional, but highly recommended_)
-  - Quick `RUN AND DEGUG` Startups
-  - ![README_image_01.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_01.png?raw=true)
-  - Click on the "Run and Debug" icon within the Visual Studio Code side-bar
-  - Select the "Server & Chrome Incognito" launch configuration from the `RUN AND DEBUG` select list
-  - Click on the play button next to the `RUN AND DEBUG` select list
-    - This will launch two debugging "Call Stacks", one for the Node.js server and one for the Chrome client
-    - This will allow for the strategic placement of breakpoints on both _client-side_ code AND _server-side_ code (_eliminating the need for `console.log()` debugging_)
-  - If you accidentially close the Chrome client during debugging, you can reattach it by:
-    - Selecting the "Chrome" or the "Chrome: Incognito" launch configuration from the `RUN AND DEBUG` select list
-    - Clicking on the play button next to the `RUN AND DEBUG` select list
+  - **Run & Debug** (_launch.json_): 
+    - Quick `RUN AND DEGUG` Startups
+    - ![README_image_01.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_01.png?raw=true)
+    - Click on the "Run and Debug" icon within the Visual Studio Code side-bar
+    - Select the "Server & Chrome Incognito" launch configuration from the `RUN AND DEBUG` select list
+    - Click on the play button next to the `RUN AND DEBUG` select list
+      - This will launch two debugging "Call Stacks", one for the Node.js server and one for the Chrome client
+      - This will allow for the strategic placement of breakpoints on both _client-side_ code AND _server-side_ code (_eliminating the need for `console.log()` debugging_)
+    - If you accidentially close the Chrome client during debugging, you can reattach it by:
+      - Selecting the "Chrome" or the "Chrome: Incognito" launch configuration from the `RUN AND DEBUG` select list
+      - Clicking on the play button next to the `RUN AND DEBUG` select list
+  - **Project Based Settings** (_settings.json_):
+    - Organizes `imports` **on save**
 
 ## Getting started
 - Open a CLI supporting the above prerequisites

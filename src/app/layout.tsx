@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import Nav from "@/components/client/Nav";
+import Footer from "@/components/server/Footer";
 import { theme } from "@/libs/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
@@ -22,6 +23,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <Nav />
             {children}
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

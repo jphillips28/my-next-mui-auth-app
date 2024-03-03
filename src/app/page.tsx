@@ -8,7 +8,7 @@ export default function Home() {
           variant="h1"
           textAlign="center"
         >
-          Hello You!!!
+          Hello Future Home Content!
         </Typography>
       </Container>
     </main>

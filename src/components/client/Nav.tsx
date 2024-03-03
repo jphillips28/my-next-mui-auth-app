@@ -120,7 +120,7 @@ export default function Nav() {
 					<Stack
 						display={{ xs: "none", sm: "flex" }}
 						direction="row"
-						spacing={2}
+						spacing={10}
 					>
 						{pages.map((page, index) => (
 							<Link

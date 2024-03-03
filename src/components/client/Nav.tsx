@@ -1,6 +1,5 @@
 "use client";
-import LogoDevIcon from "@mui/icons-material/LogoDev";
-import MenuIcon from "@mui/icons-material/Menu";
+import { LogoDev, Menu as MenuIcon } from "@mui/icons-material";
 import {
 	AppBar,
 	Avatar,
@@ -95,7 +94,7 @@ export default function Nav() {
 							href="/"
 							display={{ xs: "none", sm: "inherit" }}
 						>
-							<LogoDevIcon
+							<LogoDev
 								fontSize="large"
 								sx={{
 									width: 50,
@@ -108,7 +107,7 @@ export default function Nav() {
 						href="/"
 						display={{ xs: "inherit", sm: "none" }}
 					>
-						<LogoDevIcon
+						<LogoDev
 							fontSize="large"
 							sx={{
 								width: 50,

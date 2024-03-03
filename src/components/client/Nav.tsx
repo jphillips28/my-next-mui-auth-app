@@ -4,6 +4,7 @@ import {
 	AppBar,
 	Avatar,
 	Box,
+	Button,
 	Container,
 	IconButton,
 	Link,
@@ -13,15 +14,18 @@ import {
 	Toolbar,
 	Typography
 } from "@mui/material";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const pages = [
 	{ name: "Home", route: "/" },
 	{ name: "Blog", route: "/blog" },
 ];
-const userSettings = ["Logout"];
 
 export default function Nav() {
+	const pathName = usePathname();
+	const { data: session, status } = useSession();
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -136,36 +140,64 @@ export default function Nav() {
 							</Link>
 						))}
 					</Stack>
-					<Box>
-						<IconButton onClick={handleOpenUserMenu}>
-							<Avatar
-								//src="TODO with NextAuth implementation"
-								alt="Jacob Phillips"
-							/>
-						</IconButton>
-						<Menu
-							anchorEl={anchorElUser}
-							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'right',
-							}}
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'right',
-							}}
-							open={Boolean(anchorElUser)}
-							onClose={handleCloseUserMenu}
-						>
-							{userSettings.map((setting, index) => (
+					{session && session.user ? (
+						<Box>
+							<IconButton onClick={handleOpenUserMenu}>
+								<Avatar
+									src={session.user?.image ?? ""}
+									alt={session.user?.name ?? ""}
+								/>
+							</IconButton>
+							<Menu
+								anchorEl={anchorElUser}
+								anchorOrigin={{
+									vertical: 'bottom',
+									horizontal: 'right',
+								}}
+								transformOrigin={{
+									vertical: 'top',
+									horizontal: 'right',
+								}}
+								open={Boolean(anchorElUser)}
+								onClose={handleCloseUserMenu}
+							>
 								<MenuItem
-									key={index}
 									onClick={handleCloseUserMenu}
 								>
-									{setting}
+									<Link
+										href="#"
+										color="inherit"
+										underline="none"
+									>
+										Profile
+									</Link>
 								</MenuItem>
-							))}
-						</Menu>
-					</Box>
+								<MenuItem
+									onClick={handleCloseUserMenu}
+								>
+									<Link
+										color="inherit"
+										underline="none"
+										onClick={() => signOut()}
+									>
+										Logout
+									</Link>
+								</MenuItem>
+							</Menu>
+						</Box>
+					)
+						:
+						(
+							<Box>
+								<Button
+									color="inherit"
+									sx={{ fontWeight: 700 }}
+									onClick={() => signIn()}
+								>
+									Login
+								</Button>
+							</Box>
+						)}
 				</Toolbar>
 			</Container>
 		</AppBar>

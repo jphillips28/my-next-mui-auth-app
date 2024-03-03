@@ -101,7 +101,7 @@ export default function Nav() {
 								sx={{
 									width: 50,
 									height: 50,
-									color: "common.white",
+									color: "primary.contrastText",
 								}} />
 						</Link>
 					</Box>
@@ -114,7 +114,7 @@ export default function Nav() {
 							sx={{
 								width: 50,
 								height: 50,
-								color: "common.white",
+								color: "primary.contrastText",
 							}} />
 					</Link>
 					<Stack
@@ -131,7 +131,7 @@ export default function Nav() {
 								<Typography
 									variant="h6"
 									fontWeight={700}
-									color="common.white"
+									color="primary.contrastText"
 								>
 									{page.name}
 								</Typography>

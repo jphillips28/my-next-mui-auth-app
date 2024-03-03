@@ -2,4 +2,7 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "explicit",
 	},
+	"files.exclude": {
+		"**/.git": false,
+	}
 }

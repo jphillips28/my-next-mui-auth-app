@@ -1,4 +1,4 @@
-# My Next.js 14, Material UI 5, NextAuth 4 Web Application
+# My Next.js 14, Material UI 5, NextAuth.js 4 Web Application
 <!-- TODO -->
 TBD
 

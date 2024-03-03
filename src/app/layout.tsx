@@ -1,7 +1,8 @@
 import "@/app/globals.css";
+import Nav from "@/components/client/Nav";
 import { theme } from "@/libs/theme";
-import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
+            <Nav />
             {children}
           </ThemeProvider>
         </AppRouterCacheProvider>

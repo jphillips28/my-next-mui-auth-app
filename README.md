@@ -38,4 +38,4 @@ TBD
 - [Node.js 20](https://nodejs.org/dist/latest-v20.x/docs/api/)
 - [Next.js 14 App Router](https://nextjs.org/docs)
 - [Material UI 5](https://mui.com/material-ui/getting-started/)
-- [NextAuth 4](https://next-auth.js.org/getting-started/introduction)
+- [NextAuth.js 4](https://next-auth.js.org/getting-started/introduction)

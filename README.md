@@ -19,7 +19,7 @@ TBD
       - Selecting the "Chrome" or the "Chrome: Incognito" launch configuration from the `RUN AND DEBUG` select list
       - Clicking on the play button next to the `RUN AND DEBUG` select list
   - **Project Based Settings** (_settings.json_):
-    - Organizes `imports` **on save**
+    - Organizes `imports` ***on save***
 
 ## Getting started
 - Open a terminal supporting the above prerequisites

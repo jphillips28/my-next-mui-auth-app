@@ -19,9 +19,8 @@ import { useState } from "react";
 const pages = [
 	{ name: "Home", route: "/" },
 	{ name: "Blog", route: "/blog" },
-	{ name: "About", route: "/about" },
 ];
-const userSettings = ["Profile", "Logout"];
+const userSettings = ["Logout"];
 
 export default function Nav() {
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);

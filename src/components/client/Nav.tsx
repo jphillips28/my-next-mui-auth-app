@@ -141,7 +141,7 @@ export default function Nav() {
 					<Box>
 						<IconButton onClick={handleOpenUserMenu}>
 							<Avatar
-								src="TODO with NextAuth implementation"
+								//src="TODO with NextAuth implementation"
 								alt="Jacob Phillips"
 							/>
 						</IconButton>

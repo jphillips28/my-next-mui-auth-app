@@ -22,11 +22,23 @@ TBD
     - Organizes `imports` **on save**
 
 ## Getting started
-- Open a CLI supporting the above prerequisites
+- Open a terminal supporting the above prerequisites
 - Clone this repository's default branch to a local directory
 - Navigate to the newly cloned local repository
   - I recommend using Visual Studio Code (_it's free!_)
-<!-- - Copy and rename the `.env.local.sample` file to `.env.local` -->
+- Copy and rename the `.env.local.sample` file to `.env.local`
+  - Configure and populate appropriate `.env.local` values
+    - The `NEXTAUTH_URL` can be set to `http://localhost:3000` for local development
+    - The `NEXTAUTH_SECRET` can be generated (_using `openssl rand -base64 32` in a termnial_)
+    - You'll need to generate the `GITHUB_ID` and `GITHUB_SECRET` values inside your GitHub User Settings
+      - Login to [GitHub](https://github.com/) and select `Settings` below your User Icon
+      - Select `Developer Settings`
+      - Select `OAuth Apps`
+      - Click the `New OAuth App` button
+        - The `Homepage URL` can be set to `http://localhost:3000` for local development
+        - The associated `Authorization callback URL` would be `http://localhost:3000/api/auth/callback/github`
+      - Set the `GITHUB_ID` to the generated `Client Id`
+      - Set the `GITHUB_SECRET` to the generated `Client Secret` (_caution, you'll only be able to see this value once, but you can easily generate a new one_)
 - Run `npm install`
   - I recommend running `npm ci` if you've already _initialized_ project dependencies (_i.e. a `package-lock.json` exists_)
 - The supported local `npm run <script>` commands are:

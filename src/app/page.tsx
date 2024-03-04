@@ -5,7 +5,7 @@ export default function Home() {
     <main>
       <Container>
         <Box
-          minHeight={"calc(100vh - 250px)"}
+          minHeight={"calc(100vh - 241px)"}
           px={2}
           pt={2}
           pb={10}

@@ -6,12 +6,11 @@ import {
 	Box,
 	Button,
 	Container,
+	Grid,
 	IconButton,
 	Link,
 	Menu,
 	MenuItem,
-	Stack,
-	Toolbar,
 	Typography
 } from "@mui/material";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -47,20 +46,19 @@ export default function Nav() {
 	return (
 		<AppBar position="sticky">
 			<Container maxWidth="xl">
-				<Toolbar
-					disableGutters
-					sx={{ justifyContent: "space-between" }}
+				<Grid
+					container
+					alignItems="center"
+					textAlign="center"
+					spacing={3}
 				>
-					<Box
-						display="flex"
-						alignItems="center"
-						justifyContent="start"
-					>
+					<Grid item xs={3} textAlign="left">
 						<IconButton
 							size="large"
 							color="inherit"
 							aria-label="nav-menu"
 							aria-haspopup="true"
+							sx={{ display: { xs: "inherit", sm: "none" } }}
 							onClick={handleOpenNavMenu}
 						>
 							<MenuIcon />
@@ -106,99 +104,102 @@ export default function Nav() {
 									color: "primary.contrastText",
 								}} />
 						</Link>
-					</Box>
-					<Link
-						href="/"
-						display={{ xs: "inherit", sm: "none" }}
-					>
-						<LogoDev
-							fontSize="large"
-							sx={{
-								width: 50,
-								height: 50,
-								color: "primary.contrastText",
-							}} />
-					</Link>
-					<Stack
-						display={{ xs: "none", sm: "flex" }}
-						direction="row"
-						spacing={10}
-					>
-						{pages.map((page, index) => (
-							<Link
-								key={index}
-								href={page.route}
-								underline="none"
-							>
-								<Typography
-									variant="h6"
-									fontWeight={700}
-									color="primary.contrastText"
+					</Grid>
+					<Grid item xs={6}>
+						<Link
+							href="/"
+							display={{ xs: "inherit", sm: "none" }}
+						>
+							<LogoDev
+								fontSize="large"
+								sx={{
+									width: 50,
+									height: 50,
+									color: "primary.contrastText",
+								}} />
+						</Link>
+						<Box
+							display={{ xs: "none", sm: "flex" }}
+							justifyContent="space-evenly"
+						>
+							{pages.map((page, index) => (
+								<Link
+									key={index}
+									href={page.route}
+									underline="none"
 								>
-									{page.name}
-								</Typography>
-							</Link>
-						))}
-					</Stack>
-					{session && session.user ? (
-						<Box>
-							<IconButton onClick={handleOpenUserMenu}>
-								<Avatar
-									src={session.user?.image ?? ""}
-									alt={session.user?.name ?? ""}
-								/>
-							</IconButton>
-							<Menu
-								anchorEl={anchorElUser}
-								anchorOrigin={{
-									vertical: 'bottom',
-									horizontal: 'right',
-								}}
-								transformOrigin={{
-									vertical: 'top',
-									horizontal: 'right',
-								}}
-								open={Boolean(anchorElUser)}
-								onClose={handleCloseUserMenu}
-							>
-								<MenuItem
-									onClick={handleCloseUserMenu}
-								>
-									<Link
-										href="#"
-										color="inherit"
-										underline="none"
+									<Typography
+										variant="h6"
+										fontWeight={700}
+										color={pathName === page.route ? "text.secondary" : "primary.contrastText"}
 									>
-										Profile
-									</Link>
-								</MenuItem>
-								<MenuItem
-									onClick={handleCloseUserMenu}
-								>
-									<Link
-										color="inherit"
-										underline="none"
-										onClick={() => signOut()}
-									>
-										Logout
-									</Link>
-								</MenuItem>
-							</Menu>
+										{page.name}
+									</Typography>
+								</Link>
+							))}
 						</Box>
-					)
-						:
-						(
+					</Grid>
+					<Grid item xs={3} textAlign="right">
+						{session && session.user ? (
 							<Box>
-								<Button
-									color="inherit"
-									sx={{ fontWeight: 700 }}
-									onClick={() => signIn()}
+								<IconButton onClick={handleOpenUserMenu}>
+									<Avatar
+										src={session.user?.image ?? ""}
+										alt={session.user?.name ?? ""}
+									/>
+								</IconButton>
+								<Menu
+									anchorEl={anchorElUser}
+									anchorOrigin={{
+										vertical: 'bottom',
+										horizontal: 'right',
+									}}
+									transformOrigin={{
+										vertical: 'top',
+										horizontal: 'right',
+									}}
+									open={Boolean(anchorElUser)}
+									onClose={handleCloseUserMenu}
 								>
-									Login
-								</Button>
+									<MenuItem
+										onClick={handleCloseUserMenu}
+									>
+										<Link
+											href="#"
+											color="inherit"
+											underline="none"
+										>
+											Profile
+										</Link>
+									</MenuItem>
+									<MenuItem
+										onClick={handleCloseUserMenu}
+									>
+										<Link
+											color="inherit"
+											underline="none"
+											onClick={() => signOut()}
+										>
+											Logout
+										</Link>
+									</MenuItem>
+								</Menu>
 							</Box>
-						)}
-				</Toolbar>
+						)
+							:
+							(
+								<Box>
+									<Button
+										color="inherit"
+										sx={{ fontWeight: 700 }}
+										onClick={() => signIn()}
+									>
+										Login
+									</Button>
+								</Box>
+							)}
+					</Grid>
+				</Grid>
 			</Container>
 		</AppBar>
 	);

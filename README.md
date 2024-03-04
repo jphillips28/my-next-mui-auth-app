@@ -53,6 +53,15 @@ Tinkering around with a generic web application "setup" repo using these "new" f
   - `npm run start` for a local production app
     - On [http://localhost:3000](http://localhost:3000)
   - `npm run lint` (_TODO: Needs more `.eslint` configuration_)
+- The supported docker `make <env>-<script>` commands are:
+  - `make dev-build` for a development image build
+  - `make prod-build` for a production image build
+  - `make dev-start` for a development container
+    - On [http://localhost:3000](http://localhost:3000)
+  - `make prod-start` for a production container
+    - On [http://localhost:3000](http://localhost:3000)
+  - `make dev-stop`
+  - `make prod-stop`
 
 ## Supporting Library Documentation
 - [Node.js 20](https://nodejs.org/dist/latest-v20.x/docs/api/)

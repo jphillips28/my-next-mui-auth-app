@@ -1,7 +1,10 @@
 # My Next.js 14, Material UI 5, NextAuth.js 4 Web Application
 Tinkering around with a generic web application "setup" repo using these "new" frameworks. The current state of this web app has a fully responsive CSS layout and authentication/authorization.
+
 ![README_image_02.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_02.png?raw=true)
+
 ![README_image_03.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_03.png?raw=true)
+
 ![README_image_04.png](https://github.com/jphillips28/my-next-mui-auth-app/blob/main/README_image_04.png?raw=true)
 
 ## Prerequisites

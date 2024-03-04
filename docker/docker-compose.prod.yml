@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  next_app:
+    container_name: mynextmuiauthapp_prod
+    image: mynextmuiauthapp_prod:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    command: npm run start

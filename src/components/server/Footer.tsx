@@ -11,11 +11,9 @@ export default function Footer() {
 	return (
 		<Box
 			component="footer"
-			position="absolute"
-			bottom={0}
-			width="100%"
-			bgcolor="primary.dark"
+			bottom="0"
 			pt={2}
+			bgcolor="primary.dark"
 		>
 			<Container maxWidth="xl">
 				<Grid

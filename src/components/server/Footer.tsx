@@ -7,6 +7,8 @@ import {
 	Typography
 } from "@mui/material";
 
+const secondayTextBrightness = 0.80;
+
 export default function Footer() {
 	return (
 		<Box
@@ -33,7 +35,7 @@ export default function Footer() {
 						<Typography
 							variant="body2"
 							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
+							sx={{ filter: `brightness(${secondayTextBrightness})` }}
 						>
 							We are XYZ company, dedicated to providing the best service to our
 							customers.
@@ -51,28 +53,28 @@ export default function Footer() {
 						<Typography
 							variant="body2"
 							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
+							sx={{ filter: `brightness(${secondayTextBrightness})` }}
 						>
 							123 Main Street
 						</Typography>
 						<Typography
 							variant="body2"
 							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
+							sx={{ filter: `brightness(${secondayTextBrightness})` }}
 						>
 							Austin, TX 78731
 						</Typography>
 						<Typography
 							variant="body2"
 							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
+							sx={{ filter: `brightness(${secondayTextBrightness})` }}
 						>
 							Email: info@example.com
 						</Typography>
 						<Typography
 							variant="body2"
 							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
+							sx={{ filter: `brightness(${secondayTextBrightness})` }}
 						>
 							Phone: +1 (234) 567-8901
 						</Typography>
@@ -86,22 +88,29 @@ export default function Footer() {
 						>
 							Follow Us
 						</Typography>
-						<Box
-							color="primary.contrastText"
-							sx={{ filter: "brightness(90%)" }}
-						>
-							<Link href="#" color="inherit">
-								<Facebook />
+						<Box>
+							<Link href="#">
+								<Facebook
+									sx={{
+										color: "primary.contrastText",
+										filter: `brightness(${secondayTextBrightness})`,
+									}}
+								/>
 							</Link>
-							<Link
-								href="#"
-								color="inherit"
-								sx={{ pl: 1, pr: 1 }}
-							>
-								<Instagram />
+							<Link href="#" px={1}>
+								<Instagram
+									sx={{
+										color: "primary.contrastText",
+										filter: `brightness(${secondayTextBrightness})`,
+									}}
+								/>
 							</Link>
-							<Link href="#" color="inherit">
-								<Twitter />
+							<Link href="#">
+								<Twitter
+									sx={{
+										color: "primary.contrastText",
+										filter: `brightness(${secondayTextBrightness})`,
+									}} />
 							</Link>
 						</Box>
 					</Grid>
@@ -112,7 +121,7 @@ export default function Footer() {
 					variant="body2"
 					align="center"
 					color="primary.contrastText"
-					sx={{ filter: "brightness(90%)" }}
+					sx={{ filter: `brightness(${secondayTextBrightness})` }}
 				>
 					{"Copyright © "}
 					<Link href="#" color="inherit">

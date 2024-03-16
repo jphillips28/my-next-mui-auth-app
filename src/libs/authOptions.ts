@@ -1,6 +1,7 @@
+import type { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
 	providers: [
 		GithubProvider({
 			clientId: process.env.GITHUB_ID ?? "",
@@ -8,5 +9,8 @@ export const authOptions = {
 		}),
 	],
 	secret: process.env.NEXTAUTH_SECRET,
+	session: {
+		maxAge: 30 * 60, // minutes * seconds/minute = seconds
+	},
 	// debug: true,
 };

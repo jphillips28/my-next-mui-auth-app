@@ -178,7 +178,7 @@ export default function Nav() {
 										<Link
 											color="inherit"
 											underline="none"
-											onClick={() => signOut()}
+											onClick={() => signOut({ callbackUrl: "/" })}
 										>
 											Logout
 										</Link>

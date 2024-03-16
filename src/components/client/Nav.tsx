@@ -24,7 +24,7 @@ const pages = [
 
 export default function Nav() {
 	const pathName = usePathname();
-	const { data: session, status } = useSession();
+	const { data: session } = useSession();
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
